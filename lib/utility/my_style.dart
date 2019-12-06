@@ -14,7 +14,14 @@ class MyStyle {
   TextStyle h1Style = TextStyle(
     fontSize: 30.0,
     fontWeight: FontWeight.bold,color: Color.fromARGB(0xff, 0xbc, 0x51, 0x00),
+    fontFamily: 'IndieFlower',
   );
 
+TextStyle h2Style = TextStyle(
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,color: Color.fromARGB(0xff, 0xbc, 0x51, 0x00),
+    fontFamily: 'IndieFlower',
+  );
+  
   MyStyle();
 }

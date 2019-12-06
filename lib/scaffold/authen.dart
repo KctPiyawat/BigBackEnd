@@ -10,8 +10,27 @@ class _AutenState extends State<Auten> {
   // Field
 
   // Method
-  Widget showAppName(){
-    return Text(MyStyle().appName,style: MyStyle().h1Style,);
+
+  Widget userForm() {
+    return Container(
+      width: 250.0,
+      child: TextFormField(
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(
+            color: MyStyle().textColor,
+          )),
+          labelText: 'User : '
+        ),
+      ),
+    );
+  }
+
+  Widget showAppName() { 
+    return Text(
+      MyStyle().appName,
+      style: MyStyle().h1Style,
+    );
   }
 
   Widget showLogo() {
@@ -30,7 +49,15 @@ class _AutenState extends State<Auten> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              showLogo(),showAppName(),
+              showLogo(),
+              SizedBox(
+                height: 10.0,
+              ),
+              showAppName(),
+              SizedBox(
+                height: 10.0,
+              ),
+              userForm(),
             ],
           ),
         ),
